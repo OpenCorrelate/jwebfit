@@ -1,0 +1,150 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.github.jwebfit</groupId>
+	<artifactId>jwebfit-parent</artifactId>
+	<name>JWebFit</name>
+	<version>2.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<description>
+	    JWebFit is FIT Integration for JWebUnit, the popular web testing framework.
+	    Version 2.0 and up takes over from the previously abandoned efforts integral
+	    to jwebunit 1.0 and below.
+	</description>
+
+    <properties>
+		<fitnesse.version>20090112</fitnesse.version>
+		<fitlibrary.version>20081102</fitlibrary.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.5</version>
+            <type>jar</type>
+        </dependency>
+
+		<dependency>
+            <groupId>net.sourceforge.jwebunit</groupId>
+            <artifactId>jwebunit</artifactId>
+            <version>2.1</version>
+            <type>pom</type>
+        </dependency>
+
+		<dependency>
+            <groupId>net.sourceforge.jwebunit</groupId>
+            <artifactId>jwebunit-core</artifactId>
+            <version>2.1</version>
+        </dependency>
+
+		<dependency>
+            <groupId>httpunit</groupId>
+            <artifactId>httpunit</artifactId>
+            <version>1.6.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.jwebfit</groupId>
+            <artifactId>fit</artifactId>
+            <version>1.0</version>
+            <type>jar</type>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+		<!-- Standard Repos -->
+
+        <repository>
+            <id>jasig-repository</id>
+            <name>JA-SIG Maven2 Repository</name>
+            <url>http://developer.ja-sig.org/maven2</url>
+        </repository>
+		
+        <repository>
+            <id>Codehaus Snapshots</id>
+            <url>http://snapshots.repository.codehaus.org/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+        </repository>
+
+		<!-- FitNesse Integration Repos -->
+		
+		<repository>
+			<id>neuri-maven</id>
+			<url>http://maven.neuri.com/</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>             
+		</repository>
+        
+        <repository>
+			<id>bekk-maven</id>
+			<url>http://boss.bekk.no/proximity/repository/private</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>             
+		</repository>
+		
+		<repository>
+            <id>pyx4me-web-release</id>
+            <url>http://www.pyx4me.com/maven2-release</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+
+        <repository>
+              <id>MAIDEA Repository</id>
+              <name>MAIDEA Repository</name>
+              <layout>default</layout>
+              <url>http://quebbemann.kicks-ass.net/maven2/repository</url>
+              <snapshots>
+                <enabled>true</enabled>
+              </snapshots>
+              <releases>
+                <enabled>true</enabled>
+              </releases>
+        </repository>
+        
+        <repository>
+              <id>m2proxy-atlassian-web</id>
+              <url>https://m2proxy.atlassian.com/repository/public</url>
+              <snapshots>
+                <enabled>true</enabled>
+              </snapshots>
+              <releases>
+                <enabled>true</enabled>
+              </releases>
+        </repository>
+
+
+    </repositories>
+	
+
+	<url>http://github.com/revprez/jwebfit</url>
+	<inceptionYear>2009</inceptionYear>
+	<modules>
+		<module>jwebfit-core</module>
+	</modules>
+	<licenses>
+		<license>
+			<name>GPL License</name>
+			<url>${topDirectoryLocation}/LICENSE.txt</url>
+		</license>
+	</licenses>
+
+</project>

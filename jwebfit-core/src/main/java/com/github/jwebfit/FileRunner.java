@@ -3,7 +3,7 @@
 
 // Modified by Wilkes Joiner and Jim Weaver
 
-package net.sourceforge.jwebunit.fit;
+package com.github.jwebfit;
 
 import fit.Fixture;
 import fit.Parse;

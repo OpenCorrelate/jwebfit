@@ -3,7 +3,7 @@
  * Date: Oct 5, 2002
  * Time: 1:11:31 PM
  */
-package net.sourceforge.jwebunit.fit;
+package com.github.jwebfit;
 
 import fit.Fixture;
 import fit.Parse;

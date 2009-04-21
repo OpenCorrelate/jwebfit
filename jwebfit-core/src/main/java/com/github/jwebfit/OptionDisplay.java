@@ -1,4 +1,4 @@
-package net.sourceforge.jwebunit.fit;
+package com.github.jwebfit;
 
 import fit.RowFixture;
 import fit.Parse;
@@ -22,8 +22,8 @@ public class OptionDisplay extends RowFixture {
     }
 
     public Object[] query() throws Exception  {
-        String[] labels = WebFixture.tester.getDialog().getOptionsFor(selectName);
-        String[] values = WebFixture.tester.getDialog().getOptionValuesFor(selectName);
+        String[] labels = WebFixture.tester.getDialog().getSelectedOptions(selectName);
+        String[] values = WebFixture.tester.getDialog().getSelectOptionValues(selectName);
         return Option.buildOptions(labels, values);
     }
 

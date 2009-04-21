@@ -3,7 +3,7 @@
  * Date: Oct 22, 2002
  * Time: 10:29:33 PM
  */
-package net.sourceforge.jwebunit.fit;
+package com.github.jwebfit;
 
 import java.io.*;
 import java.net.URL;
