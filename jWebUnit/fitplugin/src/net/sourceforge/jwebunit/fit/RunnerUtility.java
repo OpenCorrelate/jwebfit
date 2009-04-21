@@ -1,4 +1,4 @@
-package com.github.jwebfit;
+package net.sourceforge.jwebunit.fit;
 
 /**
  * Used to tell the runners which kind of files they should expect for input.

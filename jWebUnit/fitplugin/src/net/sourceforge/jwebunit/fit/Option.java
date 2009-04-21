@@ -1,4 +1,4 @@
-package com.github.jwebfit;
+package net.sourceforge.jwebunit.fit;
 
 /**
  * Represents an html option element - for use in fit row/column fixtures.

@@ -1,6 +1,4 @@
-package com.github.jwebfit;
-
-import java.net.URL;
+package net.sourceforge.jwebunit.fit;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -8,12 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import junit.framework.AssertionFailedError;
-
-import net.sourceforge.jwebunit.junit.WebTester;
-import net.sourceforge.jwebunit.util.TestingEngineRegistry;
-import net.sourceforge.jwebunit.junit.WebTestCase;
-
-import com.github.reflect.MethodInvoker;
+import net.sourceforge.jwebunit.WebTester;
+import net.sourceforge.jwebunit.util.reflect.MethodInvoker;
 
 import com.meterware.httpunit.cookies.CookieProperties;
 
@@ -25,7 +19,6 @@ public class WebFixture extends ActionFixture {
 
     public WebFixture() {
         actor = this;
-        tester.setTestingEngineKey(TestingEngineRegistry.TESTING_ENGINE_HTMLUNIT);
     }
 
     public void doCells(Parse cells) {
@@ -53,7 +46,7 @@ public class WebFixture extends ActionFixture {
     }
 
 
-    public URL getBaseUrl() {
+    public String getBaseUrl() {
         return tester.getTestContext().getBaseUrl();
     }
 
@@ -109,7 +102,7 @@ public class WebFixture extends ActionFixture {
 
     public void window() {
         String windowIdOrTitle = cells.more.text();
-        if (tester.getDialog().hasWindow(windowIdOrTitle)) {
+        if (tester.getDialog().getWindow(windowIdOrTitle) != null) {
             tester.gotoWindow(cells.more.text());            
         } else {
             tester.gotoWindowByTitle(cells.more.text());            
@@ -145,11 +138,11 @@ public class WebFixture extends ActionFixture {
                     cells.more.more.more.text());
         } else if (cells.more.text().equals("checkbox after")) {
             // checkbox or radio button appearing after the text label given in next cell
-            tester.checkCheckbox(
+            tester.checkCheckboxWithLabel(
                     cells.more.more.text());
         } else if (cells.more.text().equals("checkbox before")) {
             // checkbox or radio button appearing before the text label given in next cell
-            tester.checkCheckbox(
+            tester.checkCheckboxBeforeLabel(
                     cells.more.more.text());
         } else {
             exception(
@@ -293,7 +286,7 @@ public class WebFixture extends ActionFixture {
 
     public void dumpResponse() {
         System.err.println("***************begin page***********************");
-        tester.dumpHtml(System.err);
+        tester.dumpResponse(System.err);
         System.err.println("***************end page*************************");
     }
 

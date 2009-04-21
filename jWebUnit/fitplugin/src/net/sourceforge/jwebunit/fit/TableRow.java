@@ -1,4 +1,4 @@
-package com.github.jwebfit;
+package net.sourceforge.jwebunit.fit;
 
 /**
  * Abstract class to represent the data of a table row.  Subclass and override

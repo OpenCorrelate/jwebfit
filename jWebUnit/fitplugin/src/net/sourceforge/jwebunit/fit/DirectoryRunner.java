@@ -1,4 +1,4 @@
-package com.github.jwebfit;
+package net.sourceforge.jwebunit.fit;
 
 import java.io.File;
 import java.io.FilenameFilter;

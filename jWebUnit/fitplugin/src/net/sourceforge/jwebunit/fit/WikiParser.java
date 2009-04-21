@@ -4,7 +4,7 @@
  * To change this generated comment go to 
  * Window>Preferences>Java>Code Generation>Code Template
  */
-package com.github.jwebfit;
+package net.sourceforge.jwebunit.fit;
 
 import java.io.IOException;
 import java.io.LineNumberReader;
