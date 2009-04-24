@@ -6,6 +6,7 @@
 package com.github.jwebfit;
 
 import fit.Fixture;
+import fit.Counts;
 
 import java.io.File;
 
@@ -16,7 +17,7 @@ public abstract class FitResultWriter {
         this.output = output;
     }
 
-    public abstract Fixture.Counts getCounts();
+    public abstract Counts getCounts();
 
     public abstract String getLinkString();
     public abstract String getDisplayName();

@@ -6,6 +6,7 @@
 package com.github.jwebfit;
 
 import fit.Fixture;
+import fit.Counts;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -35,8 +36,8 @@ public class DirectoryResultWriter extends FitResultWriter {
         results.add(result);
     }
 
-    public Fixture.Counts getCounts() {
-        Fixture.Counts c = new Fixture().counts;
+    public Counts getCounts() {
+        Counts c = new Fixture().counts;
         for (Iterator iterator = results.iterator(); iterator.hasNext();) {
             FitResultWriter fitResult = (FitResultWriter) iterator.next();
             c.tally(fitResult.getCounts());

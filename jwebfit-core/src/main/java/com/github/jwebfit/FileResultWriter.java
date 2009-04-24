@@ -7,6 +7,7 @@ package com.github.jwebfit;
 
 import fit.Fixture;
 import fit.Parse;
+import fit.Counts;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -16,9 +17,9 @@ import java.io.PrintWriter;
 
 public class FileResultWriter extends FitResultWriter {
     private Parse tables;
-    private Fixture.Counts counts;
+    private Counts counts;
 
-    public FileResultWriter(File output, Fixture.Counts counts, Parse tables) {
+    public FileResultWriter(File output, Counts counts, Parse tables) {
         super(output);
         this.counts = counts;
         this.tables = tables;
@@ -33,7 +34,7 @@ public class FileResultWriter extends FitResultWriter {
         return getOutput().getName().substring(0, i);
     }
 
-    public Fixture.Counts getCounts() {
+    public Counts getCounts() {
         return counts;
     }
 
